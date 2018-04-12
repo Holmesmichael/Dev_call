@@ -32,7 +32,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'haml', '~> 5.0', '>= 5.0.4'
 gem 'simple_form', '~> 3.5'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
-
+gem 'devise', '~> 4.2'
+gem 'bcrypt', git:'https://github.com/codahale/bcrypt-ruby.git',:require => 'bcrypt'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
