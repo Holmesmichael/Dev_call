@@ -1,2 +1,5 @@
 - @events.each do |event| 
-    %2= link_to event.title, event
+    %h2= link_to event.title, event
+
+
+= link_to "Post and event", new_event_path
