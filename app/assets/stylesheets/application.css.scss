@@ -53,7 +53,7 @@
     width: 100%;
     .box {
       margin: 7px;
-      width: 350px;
+      width: 500px;
       box-shadow: 0 1px 2px 0 rgba(32, 64, 207, 0.48);
       border-radius: 2px;
       text-align: center;
@@ -85,7 +85,9 @@
   }
   
   #event_show {
+    width: 100%;
     text-align: center;
+    margin-top: 20px;
     .panel-heading {
       padding: 0;
     }

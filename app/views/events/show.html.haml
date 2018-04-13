@@ -13,6 +13,10 @@
 
                     .col-md-6
                         .btn-group.pull-right
+                            = link_to RSVP_event_path(@event), method: :put, class: "btn btn-success" do
+                                RSVP
+                                = @event.get_upvotes.size
+
                             -if user_signed_in?
                                 = link_to "Edit", edit_event_path, class: "btn btn-info"
                                 = link_to "Delete", event_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
