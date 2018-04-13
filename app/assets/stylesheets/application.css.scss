@@ -10,6 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require 'masonry/transitions'
  *= require_tree .
  *= require_self
  */
@@ -18,7 +19,7 @@
  @import "bootstrap";
 
  body {
-    background: rgb(187, 187, 186);
+    background: rgb(240, 240, 231);
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -84,6 +85,7 @@
   }
   
   #event_show {
+    text-align: center;
     .panel-heading {
       padding: 0;
     }
@@ -97,6 +99,7 @@
     }
     .panel-body {
       padding: 35px;
+      text-align: center;
       h1 {
         margin: 0 0 10px 0;
         color: rgba(139, 172, 192, 0.5);
@@ -107,6 +110,9 @@
         font-weight: bold;
         line-height: 1.75;
         margin: 0;
+        text-align: center;
+      }
+      p {
         text-align: center;
       }
     }
