@@ -16,6 +16,7 @@
                             = link_to RSVP_event_path(@event), method: :put, class: "btn btn-success" do
                                 RSVP
                                 = @event.get_upvotes.size
+                                /* push the user_id to a column rsvp for the event 
 
                             -if user_signed_in?
                                 = link_to "Edit", edit_event_path, class: "btn btn-info"
