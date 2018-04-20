@@ -15,8 +15,11 @@ Goals for that app to have:
 -Handle security for users and your application's database and other resources
 
 -Trigger time-based events and messaging with background jobs
+
 -Handle location data using the Mapzen location API
 
+
+Skills working on:
 
 -Create a Rails app
 
