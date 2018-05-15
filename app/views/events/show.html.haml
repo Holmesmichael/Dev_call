@@ -10,17 +10,15 @@
                         %p.user
                             by
                             = @event.user.email
-
+                            
                     .col-md-6
-                        .btn-group.pull-right
-                            = link_to RSVP_event_path(@event), method: :put, class: "btn btn-success" do
-                                RSVP
-                                = @event.get_upvotes.size
-                                /* push the user_id to a column rsvp for the event 
+                        .rsvp= button_to "Rsvp now", rsvps_event_path(@event), class: "btn btn-primary"
+                        
+                                
 
-                            -if user_signed_in?
-                                = link_to "Edit", edit_event_path, class: "btn btn-info"
-                                = link_to "Delete", event_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
+                        -if @event.user == current_user
+                            = link_to "Edit", edit_event_path, class: "btn btn-info"
+                            = link_to "Delete", event_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
 
 
 

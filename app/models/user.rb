@@ -1,7 +1,12 @@
 class User < ApplicationRecord
   has_many :events
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+  has_many :rsvps
+  
+  acts_as_voter
+  
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 end
+
+

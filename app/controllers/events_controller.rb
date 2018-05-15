@@ -7,6 +7,7 @@ class EventsController < ApplicationController
     end
 
     def show
+        @event = Event.find params[:id]
     end
 
     def new
@@ -27,6 +28,7 @@ class EventsController < ApplicationController
     end
 
     def update 
+        
         if @event.update(event_params)
             redirect_to @event, notice: "Congrats, Event was updated!"
         else
