@@ -11,7 +11,9 @@
     .form-group 
         = f.input :title, input_html: { class: 'form-control' }
     .form-group 
-        = f.input :date, input_html: { class: 'form-control' }
+        = f.input :date, datetime_select: { class: 'form-control' }
+    .form-group 
+        = f.input :address, input_html: { class: 'form-control' }
     .form-group
         = f.input :description, input_html: { class: 'form-control' }
 

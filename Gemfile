@@ -23,6 +23,7 @@ gem 'masonry-rails', '~> 0.2.4'
 gem 'execjs'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'cancan', '~> 1.6', '>= 1.6.10'
+gem 'geocoder', '~> 1.3', '>= 1.3.7'
 
 
 group :development, :test do
