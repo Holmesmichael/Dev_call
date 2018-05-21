@@ -24,7 +24,8 @@ gem 'execjs'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'cancan', '~> 1.6', '>= 1.6.10'
 gem 'geocoder', '~> 1.3', '>= 1.3.7'
-
+gem 'cancancan', '~> 1.15'
+gem 'net_http_ssl_fix', '~> 0.0.9', require: 'net_http_ssl_fix'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

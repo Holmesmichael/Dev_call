@@ -19,9 +19,11 @@
                         
                                 
 
-                        -if @event.user == current_user
+                        -if @event.user == current_user || current_user.admin? 
                             = link_to "Edit", edit_event_path, class: "btn btn-info"
                             = link_to "Delete", event_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
+
+                      
 
 
 
