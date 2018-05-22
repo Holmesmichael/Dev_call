@@ -15,13 +15,15 @@
                             = @event.user.email
                             
                     .col-md-6
-                        .rsvp= button_to "Rsvp now", rsvps_event_path(@event), class: "btn btn-primary"
+                        .rsvp 
+                        = button_to "Click to Rsvp!!!!!", rsvps_event_path(@event), class: "btn btn-primary", style: "margin-bottom: 10px;"
+                    
+                        -if can? :edit, @event || current_user.admin? 
+                            = link_to "Edit", edit_event_path(@event), class: "btn btn-info"
+                            |
+                        -if can? :destroy, @event || current_user.admin? 
+                            = link_to "Delete", event_path(@event), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
                         
-                                
-
-                        -if @event.user == current_user || current_user.admin? 
-                            = link_to "Edit", edit_event_path, class: "btn btn-info"
-                            = link_to "Delete", event_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
 
                       
 

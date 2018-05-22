@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
     before_action :find_event, only: [:show, :edit, :update, :destroy, :upvote]
     before_action :authenticate_user!, except: [:index, :show]
+    load_and_authorize_resource
 
     def index
         @events = Event.all.order("created_at DESC")
@@ -8,6 +9,7 @@ class EventsController < ApplicationController
 
     def show
         @event = Event.find params[:id]
+        authorize! :read, @article
     end
 
     def new
